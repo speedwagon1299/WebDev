@@ -1,0 +1,12 @@
+caption
+{
+    background-color: blue;
+}
+th
+{
+    border: 3px solid black;
+}
+td
+{
+    border: 2px solid rgb(255, 0, 0);
+}

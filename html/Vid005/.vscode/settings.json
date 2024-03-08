@@ -1,0 +1,8 @@
+{
+    "vscord.status.idle.timeout": 3000,
+    "vscord.status.problems.enabled": false,
+    "vscord.app.name": "Visual Studio Code",
+    "vscord.status.idle.check": false,
+    "vscord.status.idle.enabled": true,
+    "vscord.status.details.text.notInFile": "a-a-a-are you retarded 🤓👆"
+}

@@ -1,0 +1,21 @@
+p
+{
+    background-color: aqua;
+}
+a
+{
+    background-color: greenyellow;
+}
+.red-font
+{
+    color: red;
+}
+.yellow-bg  /* . for class identification */
+{
+    background-color: yellow;
+}
+#fourthdiv  /* . for id identification */
+{
+    color: yellow;
+    background-color: red;
+}

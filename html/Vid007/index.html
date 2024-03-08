@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Forms - Please fill it 🤓👆</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form action="post">
+        <div>    
+            <label for="username">Username: </label>
+            <input type="text" id="username" name = "UserName" placeholder="Enter" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password: </label>
+            <input type = "password" id="password" name="password" placeholder="Enter" required pattern="[a-zA-Z0-9]+">
+        </div>
+        <br>
+        <div>
+            <label for="gender">Select Gender: </label>
+            <input type= "radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="gay" name="gender" value="gay">
+            <label for="gay">Gay AF</label>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" name="sub" id="subscribe">
+            <label for="subscribe">Sarakabaribe</label>
+        </div>
+        <br>
+        <div>
+            <label for="whysub">Why did you sarakabaribe</label>
+            <br>
+            <textarea id="whysub" name="comment" rows="4" cols="50" placeholder="Enter"></textarea>
+        </div>
+        <div>
+            <select name="ytbers" id="ytbers">
+                <option value="tfs">tfs</option>
+                <option value="markimoo">markimoo</option>
+                <option value="ryan higa">ryan higa</option>
+            </select>
+        </div>
+        </form>
+        <script src="" async defer></script>
+    </body>
+</html>

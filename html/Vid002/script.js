@@ -1,0 +1,1 @@
+alert("welcome to za warudo domain")
