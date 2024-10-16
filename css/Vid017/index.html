@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            /* Element Selector */
+            span
+            {
+                color: aquamarine;
+                background-color: purple;   /*Not implemented in child div block skill issue */
+            }
+            /* Class Selector */
+            .red
+            {
+                color: red;
+            }
+            /* ID Selector */
+            #my_span
+            {
+                background-color: yellow;
+            }
+            /* (Direct) Child Selector */
+            span > p
+            {
+                color: gray;
+                background-color: blue;
+            }
+            /* (Indirect) Descendent Selector */
+            span p
+            {
+                color: gray;
+                background-color: blue;
+            }
+            /* Universal Selector */
+            *
+            {
+                margin: 3;
+                padding: 3;
+            }
+            /* Psudeo Selector */
+            a:visited
+            {
+                color: red;
+            }
+            a:link
+            {
+                color:blue;
+            }
+            a:active
+            {
+                background-color: turquoise;
+                color: black;
+            }
+            a:hover
+            {
+                background-color: yellow;
+                color: blue;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <span> These are words </span>
+        <p class="red">I AM REDDD</p>
+        <span id = "my_span">
+            My span??
+            <p> Child?? </p>
+            <div>
+                <p>Adopted</p>
+            </div>
+        </span>
+        <div>
+            <a href="https://google.com/">Google</a>
+            <a href="https://instagram.com/">Insta</a>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
