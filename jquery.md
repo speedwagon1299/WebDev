@@ -171,41 +171,6 @@ $(document).ready(function () {
 
 jQuery simplifies web development by providing an easy-to-use API for DOM manipulation, event handling, animations, and AJAX. It remains relevant for projects requiring quick and efficient scripting, especially for legacy browsers and lightweight applications.
 
-# jQuery: Usage, Syntax, Functions, and Programming Approach
-
-## Introduction to jQuery
-
-jQuery is a fast, lightweight, and feature-rich JavaScript library designed to simplify client-side scripting. It allows developers to manipulate HTML documents, handle events, create animations, and manage asynchronous requests easily.
-
-### Why Use jQuery?
-
--   Simplifies DOM manipulation
--   Cross-browser compatibility
--   Efficient event handling
--   Built-in animation effects
--   AJAX support
--   Lightweight and easy to use
-
-## Getting Started with jQuery
-
-To use jQuery, include the library in your HTML file using a CDN link:
-
-```html
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-```
-
-## Basic Syntax
-
-jQuery syntax follows a simple structure:
-
-```javascript
-$(document).ready(function () {
-    // jQuery code goes here
-});
-```
-
-The `$` symbol represents the jQuery function, which is used to select elements and perform actions.
-
 ## jQuery Functions with Code, Output, and Explanation
 
 | Function      | Code Example                                                                                                                             | Output                                             | Explanation                                        |

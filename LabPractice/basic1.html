@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="jquery.min.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"></style>
+    </head>
+    <body class="container bg-dark">
+        <p class="text-primary" id="myp">Touch me!</p>
+        <div id="mydiv" class="mt-4 mb-10 bg-light text-danger">
+            Dont stay on me
+        </div>
+        <div id="btn-div" class="bg-primary text-center">
+            <button id="mybtn" class="btn-success">This is the button</button>
+        </div>
+        <div class="mt-10" id="middle-text" class="text-center text-warning">
+            This is the text
+        </div>
+        <div class="mt-10" id="bottom-text"></div>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $("#myp").mouseenter(function () {
+                $("#bottom-text").text("Stay!!");
+                $("#bottom-text").attr({
+                    "class": "text-danger",
+                });
+            });
+            $("p").on({
+                mouseleave: function() {
+                    $(this).css({"background-color": "lightblue"});
+                },
+                click: function() {
+                    $(this).hide(1000);
+                    $(this).show(500);
+                },
+            });
+            $("#mydiv").hover(function() {
+                let x = 5;
+                let y = 3;
+                let z = [];
+                for(let i = 0; i < x+y; i++) {
+                    z.push(i+1);
+                }
+                $("#bottom-text").text("Numbers: " + z.join(", "));
+                $("#bottom-text").attr({
+                    "class": "text-primary",
+                });
+            });
+            $("#btn-div").on({
+                click: function() {
+                    $("#middle-text").slideToggle();
+                }
+            });
+        });
+    </script>
+</html>
