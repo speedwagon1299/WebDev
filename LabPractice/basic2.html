@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="jquery.min.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <title>More HTML</title>
+        <style>
+            #ball {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                background-color: red;
+                position: relative;
+                bottom: 0px;
+            }
+        </style>
+    </head>
+    <body class="container bg-dark text-light">
+        <br/><br/><br/>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Bouncing Ball</h3>
+                <div id="background" class="w-100">
+                    <div id="ball"></div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-4 mt-4">
+                    <h3>Input</h3>
+                    <div class="form-group">
+                        <label for="usn" class="form-label">Username: </label>
+                        <input type="text" class="form-control" id="usn">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" class="form-label">Password: </label>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                <div>
+                <div class="mb-4 mt-4">
+                    <h3>Checkbox</h3>
+                    <div class="checkbox">
+                        <input type="checkbox" value="" id="love-check" class="form-check-input">
+                        <label for="love-check" class="form-check-label">Love not doing css</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" value="" id="like-check" class="form-check-input">
+                        <label for="like-check" class="form-check-label">like not doing css</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" value="" id="hate-check" class="form-check-input">
+                        <label for="hate-check" class="form-check-label">I HATE CSS</label>
+                    </div>
+                <div>
+                <div class="mb-4 mt-4">
+                    <h3>Radio</h3>
+                    <div class="radio">
+                        <input type="radio" value="" id="love-radio" name="opt-css" class="form-check-input">
+                        <label for="love-radio" class="form-check-label">Love not doing css</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" value="" id="like-radio" name="opt-css" class="form-check-input">
+                        <label for="like-radio" class="form-check-label">like not doing css</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" value="" id="hate-radio" name="opt-css" class="form-check-input">
+                        <label for="hate-radio" class="form-check-label">I HATE CSS</label>
+                    </div>
+                <div>    
+                <div class="mb-4 mt-4">
+                    <h3>Select</h3>
+                    <div class="form-group">
+                        <label class="form-label" for="css-sel">Regarding CSS</label>
+                        <select class="form-control" id="css-sel">
+                            <option class="form-select">HATE</option>
+                            <option class="form-select">HATER</option>
+                            <option class="form-select">HATEST</option>
+                        </select>
+                    </div>
+                <div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                function bounceBall() {
+                    $("#ball").animate(
+                        {
+                            bottom: "-=300px",
+                        },
+                        "slow",
+                        function () {
+                            $("#ball").animate(
+                                {
+                                    bottom: "+=300px",
+                                },
+                                "fast",
+                                bounceBall
+                            );
+                        }
+                    );
+                }
+                bounceBall();
+            });
+        </script>
+    </body>
+</html>

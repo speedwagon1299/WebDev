@@ -3,54 +3,78 @@
     <head>
         <meta charset="utf-8" />
         <script src="jquery.min.js"></script>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"></style>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <style>
+            #ball {
+                height: 50px;
+                width: 50px;
+                border-radius: 20px;
+            }
+        </style>
     </head>
     <body class="container bg-dark">
         <p class="text-primary" id="myp">Touch me!</p>
         <div id="mydiv" class="mt-4 mb-10 bg-light text-danger">
             Dont stay on me
         </div>
-        <div id="btn-div" class="bg-primary text-center">
-            <button id="mybtn" class="btn-success">This is the button</button>
+        <div id="btn-div" class="bg-primary text-center btn-grp">
+            <!-- Fixed class issue -->
+            <button id="mybtn-left" class="btn-success">Left button</button>
+            <button id="mybtn-right" class="btn-success">Right button</button>
         </div>
-        <div class="mt-10" id="middle-text" class="text-center text-warning">
+        <div
+            class="mt-10 text-center text-warning"
+            id="middle-text"
+            style="display: none"
+        >
             This is the text
+        </div>
+        <div class="mt-10 text-center text-danger" id="middler-text">
+            slidersss
         </div>
         <div class="mt-10" id="bottom-text"></div>
     </body>
     <script>
         $(document).ready(function () {
             $("#myp").mouseenter(function () {
-                $("#bottom-text").text("Stay!!");
-                $("#bottom-text").attr({
-                    "class": "text-danger",
-                });
+                $("#bottom-text").text("Stay!!").attr("class", "text-danger");
             });
+
             $("p").on({
-                mouseleave: function() {
-                    $(this).css({"background-color": "lightblue"});
+                mouseleave: function () {
+                    $(this).css({ "background-color": "lightblue" });
                 },
-                click: function() {
-                    $(this).hide(1000);
-                    $(this).show(500);
+                click: function () {
+                    $(this).hide(1000).show(500);
                 },
             });
-            $("#mydiv").hover(function() {
-                let x = 5;
-                let y = 3;
-                let z = [];
-                for(let i = 0; i < x+y; i++) {
-                    z.push(i+1);
+
+            $("#mydiv").hover(function () {
+                let x = 5,
+                    y = 3,
+                    z = [];
+                for (let i = 0; i < x + y; i++) {
+                    z.push(i + 1);
                 }
-                $("#bottom-text").text("Numbers: " + z.join(", "));
-                $("#bottom-text").attr({
-                    "class": "text-primary",
+                $("#bottom-text")
+                    .text("Numbers: " + z.join(", "))
+                    .attr("class", "text-primary");
+            });
+
+            $("#mybtn-left").on("click", function () {
+                $("#middle-text").slideToggle();
+                $("#middler-text").css("position", "relative").animate({
+                    left: "-=20px",
+                    opacity: "1.0",
                 });
             });
-            $("#btn-div").on({
-                click: function() {
-                    $("#middle-text").slideToggle();
-                }
+
+            $("#mybtn-right").on("click", function () {
+                $("#middle-text").slideToggle();
+                $("#middler-text").css("position", "relative").animate({
+                    left: "+=20px",
+                    opacity: "0.5",
+                });
             });
         });
     </script>
