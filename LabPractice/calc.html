@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="jquery.min.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    </head>
+    <body class="bg-dark justify-content-center">
+        <br /><br /><br /><br /><br />
+        <div class="container bg-light col-sm-2 text-center">
+            <input type="text" id="expr" class="form-input w-100" disabled />
+            <div id="button-group" class="text-center btn-grp">
+                <table class="table table-bordered table-md">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-7"
+                                    value="7"
+                                >
+                                    7
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-8"
+                                    value="8"
+                                >
+                                    8
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-9"
+                                    value="9"
+                                >
+                                    9
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-+"
+                                    value="+"
+                                >
+                                    +
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-4"
+                                    value="4"
+                                >
+                                    4
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-5"
+                                    value="5"
+                                >
+                                    5
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-6"
+                                    value="6"
+                                >
+                                    6
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn--"
+                                    value="-"
+                                >
+                                    -
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-1"
+                                    value="1"
+                                >
+                                    1
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-2"
+                                    value="2"
+                                >
+                                    2
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-3"
+                                    value="3"
+                                >
+                                    3
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-="
+                                    value="="
+                                >
+                                    =
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-."
+                                    value="."
+                                >
+                                    .
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-0"
+                                    value="0"
+                                >
+                                    0
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-c"
+                                    value="c"
+                                >
+                                    c
+                                </button>
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-sm w-100"
+                                    id="btn-="
+                                    value="="
+                                >
+                                    =
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                let expr = "";
+                $("#button-group button").on({
+                    click: function () {
+                        let val = $(this).val();
+                        if (val === "=") {
+                            expr = eval(expr).toString();
+                        } else if (val === "c") {
+                            expr = "";
+                        } else {
+                            expr += val;
+                        }
+                        $("#expr").val(expr);
+                    },
+                });
+            });
+        </script>
+    </body>
+</html>
