@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="jquery.min.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <title>TO DO</title>
+    </head>
+    <body class="bg-dark justify-content-center">
+        <br/><br/><br/><br/><br/>
+        <div class="container bg-warning col-sm-4">
+            <br/>
+            <h3 class="text-center">To Do List:</h3>
+            <div class="mt-4 mb-4 pl-5">
+                <label class="form-check-label"><input id="check1" type="checkbox" class="form-check-input"></input><span id="des1">Task 1 </span><span id="badge1" class="badge badge-danger text-right">20</span></label>
+            </div>
+            <div class="mt-4 mb-4 pl-5">
+                <label class="form-check-label"><input id="check2" type="checkbox" class="form-check-input"></input><span id="des2">Task 2 </span><span id="badge2" class="badge badge-info text-right">10</span></label>
+            </div>
+            <div class="mt-4 mb-4 pl-5">
+                <label class="form-check-label"><input id="check3" type="checkbox" class="form-check-input"></input><span id="des3">Task 3 </span><span id="badge3" class="badge badge-success text-right">0</span></span></label>
+            </div>
+            <br/>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".form-check-label input").on({
+                    click: function() {
+                        let state = $(this).prop('checked');
+                        let span = $(this).closest('label').find('span:first');
+                        if(state === true) {
+                            span.css("text-decoration", "line-through")
+                        }
+                        else {
+                            span.css("text-decoration", "none");
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

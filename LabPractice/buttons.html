@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <title>jQuery Input Handling</title>
+    </head>
+    <body
+        class="bg-dark d-flex justify-content-center align-items-center vh-100"
+    >
+        <div class="container bg-warning col-sm-6 p-4 rounded shadow">
+            <h3 class="text-center">jQuery Input Handling</h3>
+
+            <!-- Text Input -->
+            <div class="mb-3">
+                <label>Enter Name:</label>
+                <input type="text" id="text-input" class="form-control" />
+                <button id="get-text" class="btn btn-primary mt-2">
+                    Get Text
+                </button>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="mb-3">
+                <label>
+                    <input type="checkbox" id="checkbox-input" /> Agree to terms
+                </label>
+                <button id="get-checkbox" class="btn btn-primary mt-2">
+                    Check Status
+                </button>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="mb-3">
+                <label>Select Gender:</label><br />
+                <input type="radio" name="gender" value="Male" /> Male
+                <input type="radio" name="gender" value="Female" /> Female
+                <button id="get-radio" class="btn btn-primary mt-2">
+                    Get Selected
+                </button>
+            </div>
+
+            <!-- Select Dropdown -->
+            <div class="mb-3">
+                <label>Select a Country:</label>
+                <select id="select-input" class="form-control">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                </select>
+                <button id="get-select" class="btn btn-primary mt-2">
+                    Get Selected
+                </button>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                // Get value from text input
+                $("#get-text").click(function () {
+                    alert("Text Input Value: " + $("#text-input").val());
+                });
+
+                // Get status of checkbox
+                $("#get-checkbox").click(function () {
+                    alert(
+                        "Checkbox is " + $("#checkbox-input").prop("checked")
+                    );
+                });
+
+                // Get selected radio button value
+                $("#get-radio").click(function () {
+                    alert(
+                        "Selected Gender: " +
+                            $("input[name='gender']:checked").val()
+                    );
+                });
+
+                // Get selected dropdown value
+                $("#get-select").click(function () {
+                    alert("Selected Country: " + $("#select-input").val());
+                });
+            });
+        </script>
+    </body>
+</html>
